@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#000000"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tl_eventinfo"
+            tools:context=".EventInfo">
+
+            <ProgressBar
+                android:id="@+id/waitEventProgressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginStart="168dp"
+                android:layout_marginTop="100dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/labelArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Artist/Teams"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/labelTicketStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="41dp"
+                android:text="Ticket Status"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelPriceRange" />
+
+            <TextView
+                android:id="@+id/labelBuyTicketsAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="38dp"
+                android:text="Buy Tickets At"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelTicketStatus" />
+
+            <TextView
+                android:id="@+id/labelPriceRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="35dp"
+                android:text="Price Range"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelGenres" />
+
+            <TextView
+                android:id="@+id/labelGenres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="43dp"
+                android:text="Genres"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelTime" />
+
+            <TextView
+                android:id="@+id/labelVenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="32dp"
+                android:text="Venue"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelArtist" />
+
+            <TextView
+                android:id="@+id/labelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="37dp"
+                android:text="Date"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelVenue" />
+
+            <TextView
+                android:id="@+id/labelTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="42dp"
+                android:text="Time"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelDate" />
+
+            <TextView
+                android:id="@+id/artistTeamStr"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="#00FF00"
+                app:layout_constraintStart_toEndOf="@+id/labelArtist"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="40dp"
+                android:text="TextView"
+                android:textColor="#00FF00"
+                app:layout_constraintStart_toEndOf="@+id/labelDate"
+                app:layout_constraintTop_toBottomOf="@+id/venue" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="40dp"
+                android:text="TextView"
+                android:textColor="#00FF00"
+                app:layout_constraintStart_toEndOf="@+id/labelTime"
+                app:layout_constraintTop_toBottomOf="@+id/date" />
+
+            <TextView
+                android:id="@+id/genres"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="116dp"
+                android:layout_marginTop="44dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="#00FF00"
+                app:layout_constraintStart_toEndOf="@+id/labelGenres"
+                app:layout_constraintTop_toBottomOf="@+id/time" />
+
+            <TextView
+                android:id="@+id/priceRange"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="36dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="#00FF00"
+                app:layout_constraintStart_toEndOf="@+id/labelPriceRange"
+                app:layout_constraintTop_toBottomOf="@+id/genres" />
+
+            <TextView
+                android:id="@+id/ticketStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/badge_black"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@+id/labelTicketStatus"
+                app:layout_constraintTop_toBottomOf="@+id/priceRange" />
+
+            <TextView
+                android:id="@+id/buyTicketUrl"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="40dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="#00FF00"
+                app:layout_constraintStart_toEndOf="@+id/labelBuyTicketsAt"
+                app:layout_constraintTop_toBottomOf="@+id/ticketStatus" />
+
+            <TextView
+                android:id="@+id/venue"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="124dp"
+                android:layout_marginTop="32dp"
+                android:text="TextView"
+                android:textColor="#00FF00"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                app:layout_constraintStart_toEndOf="@+id/labelVenue"
+                app:layout_constraintTop_toBottomOf="@+id/artistTeamStr" />
+
+            <ImageView
+                android:id="@+id/seatMap"
+                android:layout_width="412dp"
+                android:layout_height="369dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelBuyTicketsAt"
+                tools:src="@tools:sample/avatars" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="#000000"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="99dp"
+            android:layout_height="98dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintStart_toEndOf="@+id/photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="19dp"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/photo"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+            android:id="@+id/spotifyLink"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:text="TextView"
+            android:textColor="#00FF00"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintStart_toEndOf="@+id/photo"
+            app:layout_constraintTop_toBottomOf="@+id/followers" />
+
+        <TextView
+            android:id="@+id/labelPopularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="36dp"
+            android:text="Popularity"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/popularityBar"
+            style="@style/CircularDeterminateProgressBar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="46dp"
+            tools:progress="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelPopularity" />
+
+        <TextView
+            android:id="@+id/popularityText"
+            android:layout_width="38dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="52dp"
+            android:text="50"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelPopularity" />
+
+        <TextView
+            android:id="@+id/labelAlbums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="20dp"
+            android:text="Popular Albums"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo" />
+
+        <ImageView
+            android:id="@+id/album1"
+            android:layout_width="115dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelAlbums"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/album2"
+            android:layout_width="109dp"
+            android:layout_height="115dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="66dp"
+            app:layout_constraintStart_toEndOf="@+id/album1"
+            app:layout_constraintTop_toBottomOf="@+id/spotifyLink"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/album3"
+            android:layout_width="116dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popularityBar"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/album2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

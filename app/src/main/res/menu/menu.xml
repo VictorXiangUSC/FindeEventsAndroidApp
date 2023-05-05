@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/facebook_button"
+        android:icon="@drawable/facebook"
+        android:title="facebook"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/twit_button"
+        android:icon="@drawable/twitter"
+        android:title="twit"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/fav_button"
+        android:icon="@drawable/heart_outline_white"
+        android:title="fav"
+        app:showAsAction="ifRoom"/>
+</menu>
+

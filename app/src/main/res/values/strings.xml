@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HW9</string>
+    <string name="tab_text_1">SEARCH</string>
+    <string name="tab_text_2">FAVOURITES</string>
+    <string name="keyword_text">Keyword_text</string>
+    <string name="search_name">Search Results</string>
+</resources>
